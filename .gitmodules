@@ -1,0 +1,3 @@
+[submodule "nusenu.relayor"]
+	path = nusenu.relayor
+	url = https://github.com/patrickod/ansible-relayor.git
