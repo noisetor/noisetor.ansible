@@ -2,7 +2,8 @@
 - hosts: noisetor
   remote_user: root
   roles:
-   - nusenu.relayor
+    - hardening
+    - nusenu.relayor
   vars:
     tor_ContactInfo: tor.noisebridge.net <admin@tor.noisebridge.net>
     tor_nicknamefile: ./nicknames.csv

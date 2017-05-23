@@ -1,0 +1,33 @@
+---
+- name: install publickeys
+  copy:
+    src: pubkeys
+    dest: /root/.ssh/authorized_keys
+  tags:
+    - hardening
+
+- name: disable SSH password login
+  lineinfile:
+    dest: /etc/ssh/sshd_config
+    regexp: "^PasswordAuthentication"
+    line: "PasswordAuthentication no"
+  tags:
+    - hardening
+
+- name: install fail2ban debian
+  apt:
+    package: fail2ban
+    state: latest
+    update_cache: yes
+    cache_valid_time: 3600
+  when: ansible_distribution == 'Debian'
+  tags:
+    - hardening
+
+- name: install fail2ban FreeBSD
+  pkgng:
+    name: py27-fail2ban
+    state: present
+  when: ansible_distribution == 'FreeBSD'
+  tags:
+    - hardening
