@@ -9,10 +9,7 @@
     tor_nicknamefile: ./nicknames.csv
     tor_signingkeylifetime_days: 180
     tor_maxPublicIPs: 4
-    tor_RelayBandwidthRate: 125 MBytes
-    tor_AccountingRule: max
-    tor_AccountingStart: week 0 12:00
-    tor_AccountingMax: 9450 GBytes # equivalent of 1/4 500Mbps over one week
+    tor_RelayBandwidthRate: 125 MBits
     tor_ExitRelay: true
     tor_ExitPolicy: accept *:20-23, accept *:43, accept *:53, accept *:79-81, accept *:88, accept *:110, accept *:143, accept *:194, accept *:220, accept *:443, accept *:464-465, accept *:543-544, accept *:563, accept *:587, accept *:706, accept *:749, accept *:873, accept *:902-904, accept *:981, accept *:989-995, accept *:1194, accept *:1220, accept *:1293, accept *:1500, accept *:1723, accept *:1863, accept *:2082-2083, accept *:2086-2087, accept *:2095-2096, accept *:3128, accept *:3389, accept *:3690, accept *:4321, accept *:4643, accept *:5050, accept *:5190, accept *:5222-5223, accept *:5900, accept *:6666-6667, accept *:6679, accept *:6697, accept *:8000, accept *:8008, accept *:8080, accept *:8087-8088, accept *:8333, accept *:8443, accept *:8888, accept *:9418, accept *:9999, accept *:10000, accept *:19638, reject *:*
     tor_ports:
