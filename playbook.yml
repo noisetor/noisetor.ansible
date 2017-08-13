@@ -12,6 +12,18 @@
       - { ipv4: "104.223.123.99" }
       - { ipv4: "104.223.123.100" }
       - { ipv4: "104.223.123.101" }
+
+- hosts: pegasus
+  remote_user: noisetor
+  roles:
+    - nusenu.relayor
+  vars:
+    tor_ExitRelay: false
+    tor_maxPublicIPs: 1
+    tor_ports:
+      - { orport: 9000, dirport: 0 }
+    tor_ips:
+      - { ipv4: "192.195.83.134" }
      
 - hosts: exit01
   remote_user: root
