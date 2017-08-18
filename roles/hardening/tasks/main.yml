@@ -2,7 +2,7 @@
 - name: install publickeys
   copy:
     src: pubkeys
-    dest: /root/.ssh/authorized_keys
+      dest: "{{ ansible_env.HOME }}/.ssh/authorized_keys"
   tags:
     - hardening
 
